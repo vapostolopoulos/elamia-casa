@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fetch('products.json')
         .then(response => response.json())
-        .then(products => {
+        .then(data => {
+            const products = data.items;
             products.forEach(product => {
                 const productCard = document.createElement('div');
                 productCard.classList.add('product-card');
