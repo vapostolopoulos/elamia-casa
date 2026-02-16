@@ -1,34 +1,65 @@
 {
-  "items": [
+  "categories": [
     {
-      "id": 1,
-      "title": "Coffee table",
-      "price": "€450",
-      "description": "Hand-carved from solid oak, this table features a smooth finish and sturdy construction. Perfect for any room.",
-      "images": [
-        "images/coffee-table1.jpg",
-        "images/coffee-table2.jpg",
-        "images/coffee-table3.jpg"
+      "id": "living-room",
+      "name": "Living Room",
+      "image": "images/coffee-table1.jpg",
+      "items": [
+        {
+          "id": "1",
+          "title": "Coffee table",
+          "price": "€450",
+          "description": "Hand-carved from solid oak, this table features a smooth finish and sturdy construction. Perfect for any room.",
+          "images": [
+            "images/coffee-table1.jpg",
+            "images/coffee-table2.jpg",
+            "images/coffee-table3.jpg"
+          ]
+        },
+        {
+          "id": "2",
+          "title": "Console table",
+          "price": "€400",
+          "description": "Crafted from reclaimed wood, this console table adds rustic charm to your entryway or living room.",
+          "images": [
+            "images/console-table1.jpg"
+          ]
+        }
       ]
     },
     {
-      "id": 2,
-      "title": "Console table",
-      "price": "€400",
-      "description": "Crafted from reclaimed wood, this console table adds rustic charm to your entryway or living room.",
-      "images": [
-        "images/console-table1.jpg"
+      "id": "kitchen",
+      "name": "Kitchen",
+      "image": "images/shaker-box1.jpg",
+      "items": [
+        {
+          "id": "3",
+          "title": "Shaker box",
+          "price": "€150",
+          "description": "This handcrafted shaker box is made from cherry wood and features a traditional design. Perfect for storing dry goods or small items.",
+          "images": [
+            "images/shaker-box1.jpg",
+            "images/shaker-box2.jpg",
+            "images/shaker-box3.jpg"
+          ]
+        }
       ]
     },
     {
-      "id": 3,
-      "title": "Shaker box",
-      "price": "€150",
-      "description": "This handcrafted shaker box is made from cherry wood and features a traditional design. Perfect for storing small items or as a decorative piece.",
-      "images": [
-        "images/shaker-box1.jpg",
-        "images/shaker-box2.jpg",
-        "images/shaker-box3.jpg"
+      "id": "bathroom",
+      "name": "Bathroom",
+      "image": "images/shaker-box3.jpg",
+      "items": [
+        {
+          "id": "4",
+          "title": "Bathroom Storage Box",
+          "price": "€120",
+          "description": "Elegant storage solution for your bathroom amenities. Water-resistant finish.",
+          "images": [
+            "images/shaker-box3.jpg",
+            "images/shaker-box2.jpg"
+          ]
+        }
       ]
     }
   ]

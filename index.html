@@ -42,9 +42,22 @@
     </section>
 
     <section id="collection" class="container">
-        <h2 class="section-title">Current Collection</h2>
-        <div id="product-grid" class="product-grid">
-            <!-- Products will be loaded here via JavaScript -->
+        <h2 class="section-title">Our Collections</h2>
+        
+        <!-- Category Grid -->
+        <div id="category-grid" class="category-grid">
+            <!-- Categories will be loaded here via JavaScript -->
+        </div>
+
+        <!-- Product Grid (Hidden initially) -->
+        <div id="category-view" class="category-view" style="display: none;">
+            <div class="category-header">
+                <button id="back-to-categories" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Collections</button>
+                <h3 id="current-category-title"></h3>
+            </div>
+            <div id="product-grid" class="product-grid">
+                <!-- Products will be loaded here via JavaScript -->
+            </div>
         </div>
     </section>
 

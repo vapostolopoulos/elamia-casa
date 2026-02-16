@@ -12,18 +12,26 @@ collections:
       - name: "products"
         label: "Products"
         file: "products.json"
-        description: "Manage your product inventory"
+        description: "Manage your product categories and inventory"
         fields:
-          - label: "Product List"
-            name: "items"
+          - label: "Categories"
+            name: "categories"
             widget: "list"
+            summary: "{{fields.name}}"
             fields:
-              - {label: "ID", name: "id", widget: "uuid"}
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Price", name: "price", widget: "string"}
-              - {label: "Description", name: "description", widget: "text"}
-              - label: "Images"
-                name: "images"
+              - {label: "ID", name: "id", widget: "string", hint: "Unique identifier (e.g., kitchen, living-room)"}
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Category Image", name: "image", widget: "image"}
+              - label: "Product List"
+                name: "items"
                 widget: "list"
-                summary: "{{fields.image}}"
-                field: {label: "Image", name: "image", widget: "image"}
+                fields:
+                  - {label: "ID", name: "id", widget: "uuid"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Price", name: "price", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - label: "Images"
+                    name: "images"
+                    widget: "list"
+                    summary: "{{fields.image}}"
+                    field: {label: "Image", name: "image", widget: "image"}
