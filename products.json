@@ -1,63 +1,200 @@
 {
   "categories": [
     {
-      "id": "living-room",
-      "name": "Living Room",
-      "image": "images/coffee-table1.jpg",
+      "id": "pets",
+      "name": "Pets",
+      "image": "images/pet-bed-short.jpg",
       "items": [
         {
           "id": "1",
-          "title": "Coffee table",
-          "price": "€450",
-          "description": "Hand-carved from solid oak, this table features a smooth finish and sturdy construction. Perfect for any room.",
+          "title": "Hanging bed",
+          "price": "",
+          "description": "",
           "images": [
-            "images/coffee-table1.jpg",
-            "images/coffee-table2.jpg",
-            "images/coffee-table3.jpg"
+            "images/pet-hanging-bed.jpg"
           ]
         },
         {
           "id": "2",
-          "title": "Console table",
-          "price": "€400",
-          "description": "Crafted from reclaimed wood, this console table adds rustic charm to your entryway or living room.",
+          "title": "Small Pet Bed Short",
+          "price": "",
+          "description": "",
           "images": [
-            "images/console-table1.jpg"
+            "images/pet-bed-short.jpg"
           ]
-        }
-      ]
-    },
-    {
-      "id": "kitchen",
-      "name": "Kitchen",
-      "image": "images/shaker-box1.jpg",
-      "items": [
+        },
         {
           "id": "3",
-          "title": "Shaker box",
-          "price": "€150",
-          "description": "This handcrafted shaker box is made from cherry wood and features a traditional design. Perfect for storing dry goods or small items.",
+          "title": "Small Pet Bed Water Hyacinth I",
+          "price": "",
+          "description": "",
           "images": [
-            "images/shaker-box1.jpg",
-            "images/shaker-box2.jpg",
-            "images/shaker-box3.jpg"
+            "images/pet-bed-hyacinth-1.jpg"
+          ]
+        },
+        {
+          "id": "4",
+          "title": "Small Pet Bed Water Hyacinth II",
+          "price": "",
+          "description": "",
+          "images": [
+            "images/pet-bed-hyacinth-2.jpg"
           ]
         }
       ]
     },
     {
-      "id": "bathroom",
-      "name": "Bathroom",
-      "image": "images/shaker-box3.jpg",
+      "id": "garden",
+      "name": "Garden",
+      "image": "images/pot-dark-grey.jpg",
       "items": [
         {
-          "id": "4",
-          "title": "Bathroom Storage Box",
-          "price": "€120",
-          "description": "Elegant storage solution for your bathroom amenities. Water-resistant finish.",
+          "id": "6",
+          "title": "Ceramic Flower Pot ",
+          "price": "",
+          "description": "",
           "images": [
-            "images/shaker-box3.jpg",
-            "images/shaker-box2.jpg"
+            "images/pot-dark-grey.jpg",
+            "images/pot-grey.jpg",
+            "images/pot-light-grey.jpg"
+          ]
+        },
+        {
+          "id": "7",
+          "title": "Ceramic Flower Pot Plain",
+          "price": "",
+          "description": "",
+          "images": [
+            "images/pot-plain-light-grey.jpg"
+          ]
+        },
+        {
+          "id": "8",
+          "title": "Ceramic Flower Pot Saucer",
+          "price": "",
+          "description": "",
+          "images": [
+            "images/pot-saucer-grey.jpg",
+            "images/pot-saucer-light-grey.jpg",
+            "images/pot-saucer-terracotta.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "house",
+      "name": "House",
+      "image": "images/basket-bw.jpg",
+      "items": [
+        {
+          "id": "9",
+          "title": "Baskets",
+          "price": "",
+          "description": "",
+          "images": [
+            "images/basket-bw.jpg",
+            "images/basket-small.jpg"
+          ]
+        },
+        {
+          "id": "10",
+          "title": "Rattan Floor Baskets",
+          "price": "",
+          "description": "",
+          "images": [
+            "images/basket-floor-l.jpg",
+            "images/basket-floor-m.jpg",
+            "images/basket-floor-s.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "furniture",
+      "name": "Furniture",
+      "image": "images/chair-walnut.jpg",
+      "items": [
+        {
+          "id": "11",
+          "title": "Chair I",
+          "price": "",
+          "description": "",
+          "images": [
+            "images/chair-walnut.jpg"
+          ]
+        },
+        {
+          "id": "12",
+          "title": "Chair II",
+          "price": "",
+          "description": "",
+          "images": [
+            "images/chair-oak.jpg"
+          ]
+        },
+        {
+          "id": "13",
+          "title": "Minimal I",
+          "price": "",
+          "description": "",
+          "images": [
+            "images/minimal-1-oak-with-varnish.jpg",
+            "images/minimal-1-alt.jpg"
+          ]
+        },
+        {
+          "id": "14",
+          "title": "Minimal II",
+          "price": "",
+          "description": "",
+          "images": [
+            "images/minimal-2-ash-with-varnish.jpg",
+            "images/minimal-2-ash.jpg"
+          ]
+        },
+        {
+          "id": "15",
+          "title": "Minimal III",
+          "price": "",
+          "description": "",
+          "images": [
+            "images/minimal-3-oak.jpg"
+          ]
+        },
+        {
+          "id": "16",
+          "title": "Minimal IV",
+          "price": "",
+          "description": "",
+          "images": [
+            "images/minimal-4-ash-small-table.png"
+          ]
+        },
+        {
+          "id": "17",
+          "title": "Minimal V",
+          "price": "",
+          "description": "",
+          "images": [
+            "images/minimal-5-walnut.jpg"
+          ]
+        },
+        {
+          "id": "18",
+          "title": "Shelves Big",
+          "price": "",
+          "description": "",
+          "images": [
+            "images/shelves-big.png"
+          ]
+        },
+        {
+          "id": "19",
+          "title": "Shelves tall",
+          "price": "",
+          "description": "",
+          "images": [
+            "images/shelves-tall.jpg"
           ]
         }
       ]
