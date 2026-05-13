@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const backBtn = document.getElementById('back-to-categories');
     const currentCategoryTitle = document.getElementById('current-category-title');
     const productGrid = document.getElementById('product-grid');
-    
+
     // Modal elements
     const modal = document.getElementById('product-modal');
     const modalImage = document.getElementById('modal-image');
@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeModal = document.querySelector('.close-modal');
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
+
+    // Contact modal elements
+    const contactModal = document.getElementById('contact-modal');
+    const contactClose = document.querySelector('.contact-close');
 
     let currentProduct = null;
     let currentImageIndex = 0;
@@ -41,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         categories.forEach(category => {
             const catCard = document.createElement('div');
             catCard.classList.add('category-card');
-            
+
             // Use placeholder if no image
             const imageSrc = category.image || 'images/placeholder.jpg';
 
@@ -51,11 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span class="category-name">${category.name}</span>
                 </div>
             `;
-            
+
             catCard.addEventListener('click', () => {
                 showCategory(category);
             });
-            
+
             categoryGrid.appendChild(catCard);
         });
     }
@@ -64,10 +68,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function showCategory(category) {
         currentCategoryTitle.textContent = category.name;
         renderProducts(category.items);
-        
+
         categoryGrid.style.display = 'none';
         categoryView.style.display = 'block';
-        
+
         // Scroll to top of collection section
         const collectionSection = document.getElementById('collection');
         if (collectionSection) {
@@ -78,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function showCategories() {
         categoryView.style.display = 'none';
         categoryGrid.style.display = 'grid';
-        
+
         const collectionSection = document.getElementById('collection');
         if (collectionSection) {
             collectionSection.scrollIntoView({ behavior: 'smooth' });
@@ -90,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Product Rendering
     function renderProducts(products) {
         productGrid.innerHTML = '';
-        
+
         if (!products || products.length === 0) {
             productGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center;">No products found in this category.</p>';
             return;
@@ -119,9 +123,15 @@ document.addEventListener('DOMContentLoaded', () => {
             productCard.addEventListener('click', (e) => {
                 // Don't open modal if clicking the Inquire button
                 if (e.target.closest('.product-btn')) return;
-                
+
                 openModal(product);
             });
+
+            // Remove default inquire link behavior - handled by global delegate
+            const inquireBtn = productCard.querySelector('.product-btn');
+            if (inquireBtn) {
+                inquireBtn.removeAttribute('href');
+            }
 
             productGrid.appendChild(productCard);
         });
@@ -136,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 targetElement.scrollIntoView({
@@ -150,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function openModal(product) {
         currentProduct = product;
         currentImageIndex = 0;
-        
+
         updateModalContent();
         modal.style.display = 'block';
         document.body.style.overflow = 'hidden'; // Prevent scrolling background
@@ -168,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modalTitle.textContent = currentProduct.title;
         modalPrice.textContent = currentProduct.price;
         modalDescription.textContent = currentProduct.description;
-        
+
         if (currentProduct.images && currentProduct.images.length > 0) {
             modalImage.src = currentProduct.images[currentImageIndex];
         } else {
@@ -197,6 +207,25 @@ document.addEventListener('DOMContentLoaded', () => {
         updateModalContent();
     }
 
+    // Contact Modal Functions
+    function openContactModal(e) {
+        if (e) e.preventDefault();
+        const body = document.getElementById('contact-modal-body');
+        if (body && body.children.length === 0) {
+            const contactInfo = document.querySelector('#contact .contact-info');
+            const socialMedia = document.querySelector('#contact .social-media');
+            if (contactInfo) body.appendChild(contactInfo.cloneNode(true));
+            if (socialMedia) body.appendChild(socialMedia.cloneNode(true));
+        }
+        contactModal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeContactModalHandler() {
+        contactModal.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+
     // Event Listeners for Modal
     closeModal.addEventListener('click', closeModalHandler);
 
@@ -204,10 +233,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target === modal) {
             closeModalHandler();
         }
+        if (e.target === contactModal) {
+            closeContactModalHandler();
+        }
     });
 
     nextBtn.addEventListener('click', showNextImage);
     prevBtn.addEventListener('click', showPrevImage);
+
+    // Event Listeners for Contact Modal
+    if (contactClose) {
+        contactClose.addEventListener('click', closeContactModalHandler);
+    }
 
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
@@ -215,6 +252,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'Escape') closeModalHandler();
             if (e.key === 'ArrowRight') showNextImage();
             if (e.key === 'ArrowLeft') showPrevImage();
+        }
+        if (contactModal.style.display === 'block') {
+            if (e.key === 'Escape') closeContactModalHandler();
+        }
+    });
+
+    // Attach contact modal to all inquire buttons
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('.product-btn')) {
+            openContactModal(e);
         }
     });
 });
