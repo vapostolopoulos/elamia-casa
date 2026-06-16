@@ -3,11 +3,13 @@
     {
       "id": "pets",
       "name": "Pets",
+      "name_el": "Κατοικίδια",
       "image": "images/pet-bed-short.jpg",
       "items": [
         {
           "id": "1",
           "title": "Hanging bed",
+          "title_el": "Κρεμαστό Κρεβάτι",
           "price": "",
           "description": "",
           "images": [
@@ -17,6 +19,7 @@
         {
           "id": "2",
           "title": "Small Pet Bed Short",
+          "title_el": "Μικρό Κρεβάτι Κατοικιδίου",
           "price": "",
           "description": "",
           "images": [
@@ -26,6 +29,7 @@
         {
           "id": "3",
           "title": "Small Pet Bed Water Hyacinth I",
+          "title_el": "Μικρό Κρεβάτι Υδρόβιου Υάκινθου I",
           "price": "",
           "description": "",
           "images": [
@@ -35,6 +39,7 @@
         {
           "id": "4",
           "title": "Small Pet Bed Water Hyacinth II",
+          "title_el": "Μικρό Κρεβάτι Υδρόβιου Υάκινθου II",
           "price": "",
           "description": "",
           "images": [
@@ -46,11 +51,13 @@
     {
       "id": "garden",
       "name": "Garden",
+      "name_el": "Κήπος",
       "image": "images/pot-dark-grey.jpg",
       "items": [
         {
           "id": "6",
           "title": "Ceramic Flower Pot ",
+          "title_el": "Κεραμικό Γλαστράκι",
           "price": "",
           "description": "",
           "images": [
@@ -62,6 +69,7 @@
         {
           "id": "7",
           "title": "Ceramic Flower Pot Plain",
+          "title_el": "Κεραμικό Γλαστράκι Απλό",
           "price": "",
           "description": "",
           "images": [
@@ -71,6 +79,7 @@
         {
           "id": "8",
           "title": "Ceramic Flower Pot Saucer",
+          "title_el": "Κεραμικό Γλαστράκι με Πιατάκι",
           "price": "",
           "description": "",
           "images": [
@@ -84,11 +93,13 @@
     {
       "id": "house",
       "name": "House",
+      "name_el": "Σπίτι",
       "image": "images/basket-bw.jpg",
       "items": [
         {
           "id": "9",
           "title": "Baskets",
+          "title_el": "Καλάθια",
           "price": "",
           "description": "",
           "images": [
@@ -99,6 +110,7 @@
         {
           "id": "10",
           "title": "Rattan Floor Baskets",
+          "title_el": "Καλάθια Δαπέδου από Ρατάν",
           "price": "",
           "description": "",
           "images": [
@@ -112,11 +124,13 @@
     {
       "id": "furniture",
       "name": "Furniture",
+      "name_el": "Έπιπλα",
       "image": "images/chair-walnut.jpg",
       "items": [
         {
           "id": "11",
           "title": "Chair I",
+          "title_el": "Καρέκλα I",
           "price": "",
           "description": "",
           "images": [
@@ -126,6 +140,7 @@
         {
           "id": "12",
           "title": "Chair II",
+          "title_el": "Καρέκλα II",
           "price": "",
           "description": "",
           "images": [
@@ -135,6 +150,7 @@
         {
           "id": "13",
           "title": "Minimal I",
+          "title_el": "Minimal I",
           "price": "",
           "description": "",
           "images": [
@@ -145,6 +161,7 @@
         {
           "id": "14",
           "title": "Minimal II",
+          "title_el": "Minimal II",
           "price": "",
           "description": "",
           "images": [
@@ -155,6 +172,7 @@
         {
           "id": "15",
           "title": "Minimal III",
+          "title_el": "Minimal III",
           "price": "",
           "description": "",
           "images": [
@@ -164,6 +182,7 @@
         {
           "id": "16",
           "title": "Minimal IV",
+          "title_el": "Minimal IV",
           "price": "",
           "description": "",
           "images": [
@@ -173,6 +192,7 @@
         {
           "id": "17",
           "title": "Minimal V",
+          "title_el": "Minimal V",
           "price": "",
           "description": "",
           "images": [
@@ -182,6 +202,7 @@
         {
           "id": "18",
           "title": "Shelves Big",
+          "title_el": "Μεγάλη Ραφιέρα",
           "price": "",
           "description": "",
           "images": [
@@ -191,6 +212,7 @@
         {
           "id": "19",
           "title": "Shelves tall",
+          "title_el": "Ψηλή Ραφιέρα",
           "price": "",
           "description": "",
           "images": [

@@ -8,6 +8,10 @@
     --font-body: 'Lato', sans-serif;
 }
 
+html[lang="el"] {
+    --font-heading: 'GFS Didot', serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -82,6 +86,23 @@ nav a {
 
 nav a:hover {
     color: var(--accent-color);
+}
+
+.lang-toggle {
+    background: none;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: border-color 0.3s ease, transform 0.15s ease;
+    flex-shrink: 0;
+}
+
+.lang-toggle:hover {
+    border-color: var(--primary-color);
+    transform: scale(1.1);
 }
 
 /* Hero Section */
@@ -482,13 +503,21 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
     .header-content {
-        flex-direction: column;
+        flex-wrap: wrap;
         height: auto;
-        padding: 20px 0;
+        padding: 15px 0;
+        gap: 10px;
+        position: relative;
     }
 
     nav ul {
-        margin-top: 20px;
+        margin-top: 10px;
+    }
+
+    .lang-toggle {
+        position: absolute;
+        top: 18px;
+        right: 20px;
     }
 
     .hero-content h1 {

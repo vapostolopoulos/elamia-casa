@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=GFS+Didot&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
@@ -18,31 +18,32 @@
             <a href="#" class="logo">ELAMIACASA</a>
             <nav>
                 <ul>
-                    <li><a href="#collection">Collections</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#collection" data-i18n="nav_collections">Collections</a></li>
+                    <li><a href="#about" data-i18n="nav_about">About</a></li>
+                    <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
                 </ul>
             </nav>
+            <button id="lang-toggle" class="lang-toggle">🇬🇷</button>
         </div>
     </header>
 
     <section id="hero">
         <div class="hero-content">
-            <h1>Bring nature to your home</h1>
-            <p>Unique sustainable furniture custom-made designed for your home</p>
-            <a href="#collection" class="btn">View Collections</a>
+            <h1 data-i18n="hero_h1">Bring nature to your home</h1>
+            <p data-i18n="hero_p">Unique sustainable furniture custom-made designed for your home</p>
+            <a href="#collection" class="btn" data-i18n="hero_btn">View Collections</a>
         </div>
     </section>
 
     <section id="about" class="container">
         <div class="about-text">
-            <h2>Our Philosophy</h2>
-            <p>At Elamiacasa, we believe that a beautiful home shouldn’t come at the cost of a beautiful planet. Our collection is a tribute to conscious living, featuring handcrafted pieces born from reclaimed woods, organic textiles, and non-toxic finishes that breathe life into your space. We bridge the gap between high-end aesthetics and deep-rooted ethics, ensuring that every curve of a chair and every structural knot or grain of a table/chair tells a story of renewal and respect for the earth. By choosing furniture that is built to last a lifetime rather than fill a landfill, you aren’t just decorating a room—you’re cultivating a legacy of sustainability.</p>
+            <h2 data-i18n="about_h2">Our Philosophy</h2>
+            <p data-i18n="about_p">At Elamiacasa, we believe that a beautiful home shouldn’t come at the cost of a beautiful planet. Our collection is a tribute to conscious living, featuring handcrafted pieces born from reclaimed woods, organic textiles, and non-toxic finishes that breathe life into your space. We bridge the gap between high-end aesthetics and deep-rooted ethics, ensuring that every curve of a chair and every structural knot or grain of a table/chair tells a story of renewal and respect for the earth. By choosing furniture that is built to last a lifetime rather than fill a landfill, you aren’t just decorating a room—you’re cultivating a legacy of sustainability.</p>
         </div>
     </section>
 
     <section id="collection" class="container">
-        <h2 class="section-title">Our Collections</h2>
+        <h2 class="section-title" data-i18n="collections_title">Our Collections</h2>
 
         <!-- Category Grid -->
         <div id="category-grid" class="category-grid">
@@ -52,7 +53,7 @@
         <!-- Product Grid (Hidden initially) -->
         <div id="category-view" class="category-view" style="display: none;">
             <div class="category-header">
-                <button id="back-to-categories" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Collections</button>
+                <button id="back-to-categories" class="back-btn"><i class="fas fa-arrow-left"></i> <span data-i18n="back_btn">Back to Collections</span></button>
                 <h3 id="current-category-title"></h3>
             </div>
             <div id="product-grid" class="product-grid">
@@ -64,7 +65,7 @@
     <footer id="contact">
         <div class="container footer-content">
             <div class="contact-info">
-                <h3>Contact Us</h3>
+                <h3 data-i18n="contact_h3">Contact Us</h3>
                 <ul>
                     <li><i class="fas fa-envelope"></i> <a href="mailto:elamiacasa@elafonisos.gmail.com">elamiacasa@elafonisos.gmail.com</a></li>
                     <li><i class="fas fa-phone"></i> <a href="tel:+306906081475">+30 690 608 1475</a></li>
@@ -72,12 +73,12 @@
                 </ul>
             </div>
             <div class="social-media">
-                <h3>Follow Us</h3>
+                <h3 data-i18n="follow_h3">Follow Us</h3>
                 <a href="https://www.instagram.com/elamiacasa/" target="_blank" class="social-link"><i class="fab fa-instagram"></i> @elamiacasa</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 All rights reserved</p>
+            <p data-i18n="footer_copy">© 2026 All rights reserved</p>
         </div>
     </footer>
 

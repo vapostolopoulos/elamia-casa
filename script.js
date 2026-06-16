@@ -22,11 +22,104 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentProduct = null;
     let currentImageIndex = 0;
+    let currentCategory = null;
+    let productsData = null;
+
+    // --- i18n ---
+    const translations = {
+        en: {
+            nav_collections: 'Collections',
+            nav_about: 'About',
+            nav_contact: 'Contact',
+            hero_h1: 'Bring nature to your home',
+            hero_p: 'Unique sustainable furniture custom-made designed for your home',
+            hero_btn: 'View Collections',
+            about_h2: 'Our Philosophy',
+            about_p: 'At Elamiacasa, we believe that a beautiful home shouldn\'t come at the cost of a beautiful planet. Our collection is a tribute to conscious living, featuring handcrafted pieces born from reclaimed woods, organic textiles, and non-toxic finishes that breathe life into your space. We bridge the gap between high-end aesthetics and deep-rooted ethics, ensuring that every curve of a chair and every structural knot or grain of a table/chair tells a story of renewal and respect for the earth. By choosing furniture that is built to last a lifetime rather than fill a landfill, you aren\'t just decorating a room—you\'re cultivating a legacy of sustainability.',
+            collections_title: 'Our Collections',
+            back_btn: 'Back to Collections',
+            inquire_btn: 'Inquire',
+            contact_h3: 'Contact Us',
+            follow_h3: 'Follow Us',
+            footer_copy: '© 2026 All rights reserved',
+        },
+        el: {
+            nav_collections: 'Συλλογές',
+            nav_about: 'Σχετικά',
+            nav_contact: 'Επικοινωνία',
+            hero_h1: 'Φέρτε τη φύση στο σπίτι σας',
+            hero_p: 'Μοναδικά βιώσιμα έπιπλα φτιαγμένα στα μέτρα σας',
+            hero_btn: 'Δείτε τις Συλλογές',
+            about_h2: 'Η Φιλοσοφία μας',
+            about_p: 'Στην Elamiacasa, πιστεύουμε ότι ένα όμορφο σπίτι δεν πρέπει να έρχεται σε βάρος ενός όμορφου πλανήτη. Η συλλογή μας αποτελεί φόρο τιμής στη συνειδητή διαβίωση, με χειροποίητα κομμάτια από ανακυκλωμένα ξύλα, οργανικά υφάσματα και μη τοξικά φινιρίσματα που δίνουν ζωή στο χώρο σας. Γεφυρώνουμε το χάσμα μεταξύ υψηλής αισθητικής και βαθιά ριζωμένης ηθικής, διασφαλίζοντας ότι κάθε καμπύλη μιας καρέκλας και κάθε δομικός κόμπος ή νερό ενός τραπεζιού/καρέκλας αφηγείται μια ιστορία ανανέωσης και σεβασμού για τη γη. Επιλέγοντας έπιπλα που είναι φτιαγμένα να διαρκούν μια ζωή αντί να γεμίζουν χωματερές, δεν διακοσμείτε απλώς ένα δωμάτιο — καλλιεργείτε μια κληρονομιά βιωσιμότητας.',
+            collections_title: 'Οι Συλλογές μας',
+            back_btn: 'Πίσω στις Συλλογές',
+            inquire_btn: 'Επικοινωνήστε',
+            contact_h3: 'Επικοινωνία',
+            follow_h3: 'Ακολουθήστε μας',
+            footer_copy: '© 2026 Με επιφύλαξη παντός δικαιώματος',
+        }
+    };
+
+    let currentLang = localStorage.getItem('lang') || 'en';
+
+    function t(key) {
+        return (translations[currentLang] && translations[currentLang][key])
+            || translations['en'][key]
+            || key;
+    }
+
+    function applyTranslations() {
+        document.documentElement.lang = currentLang;
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            el.textContent = t(el.getAttribute('data-i18n'));
+        });
+        const toggleBtn = document.getElementById('lang-toggle');
+        if (toggleBtn) toggleBtn.textContent = currentLang === 'el' ? '🇬🇧' : '🇬🇷';
+    }
+
+    function getLocalTitle(item) {
+        return (currentLang === 'el' && item.title_el) ? item.title_el : item.title;
+    }
+
+    function getLocalName(category) {
+        return (currentLang === 'el' && category.name_el) ? category.name_el : category.name;
+    }
+
+    function setLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem('lang', lang);
+        applyTranslations();
+
+        if (productsData) {
+            if (categoryView.style.display === 'block' && currentCategory) {
+                currentCategoryTitle.textContent = getLocalName(currentCategory);
+                renderProducts(currentCategory.items);
+            } else {
+                renderCategories(productsData.categories);
+            }
+        }
+
+        if (modal.style.display === 'block' && currentProduct) {
+            modalTitle.textContent = getLocalTitle(currentProduct);
+        }
+    }
+
+    const langToggle = document.getElementById('lang-toggle');
+    if (langToggle) {
+        langToggle.addEventListener('click', () => {
+            setLanguage(currentLang === 'en' ? 'el' : 'en');
+        });
+    }
+
+    // Apply translations to static elements immediately
+    applyTranslations();
 
     // Fetch and Initialize
     fetch('products.json')
         .then(response => response.json())
         .then(data => {
+            productsData = data;
             if (data.categories) {
                 renderCategories(data.categories);
             } else {
@@ -46,13 +139,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const catCard = document.createElement('div');
             catCard.classList.add('category-card');
 
-            // Use placeholder if no image
             const imageSrc = category.image || 'images/placeholder.jpg';
+            const name = getLocalName(category);
 
             catCard.innerHTML = `
-                <img src="${imageSrc}" alt="${category.name}">
+                <img src="${imageSrc}" alt="${name}">
                 <div class="category-overlay">
-                    <span class="category-name">${category.name}</span>
+                    <span class="category-name">${name}</span>
                 </div>
             `;
 
@@ -66,13 +159,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // View Switching
     function showCategory(category) {
-        currentCategoryTitle.textContent = category.name;
+        currentCategory = category;
+        currentCategoryTitle.textContent = getLocalName(category);
         renderProducts(category.items);
 
         categoryGrid.style.display = 'none';
         categoryView.style.display = 'block';
 
-        // Scroll to top of collection section
         const collectionSection = document.getElementById('collection');
         if (collectionSection) {
             collectionSection.scrollIntoView({ behavior: 'smooth' });
@@ -104,30 +197,26 @@ document.addEventListener('DOMContentLoaded', () => {
             const productCard = document.createElement('div');
             productCard.classList.add('product-card');
 
-            // Use the first image as the thumbnail
             const thumbnail = product.images && product.images.length > 0 ? product.images[0] : 'images/placeholder.jpg';
+            const title = getLocalTitle(product);
 
             productCard.innerHTML = `
                 <div class="product-image">
-                    <img src="${thumbnail}" alt="${product.title}">
+                    <img src="${thumbnail}" alt="${title}">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">${product.title}</h3>
+                    <h3 class="product-title">${title}</h3>
                     <span class="product-price">${product.price}</span>
                     <p class="product-description">${product.description}</p>
-                    <a href="#contact" class="product-btn">Inquire</a>
+                    <a href="#contact" class="product-btn">${t('inquire_btn')}</a>
                 </div>
             `;
 
-            // Add click event to open modal
             productCard.addEventListener('click', (e) => {
-                // Don't open modal if clicking the Inquire button
                 if (e.target.closest('.product-btn')) return;
-
                 openModal(product);
             });
 
-            // Remove default inquire link behavior - handled by global delegate
             const inquireBtn = productCard.querySelector('.product-btn');
             if (inquireBtn) {
                 inquireBtn.removeAttribute('href');
@@ -140,7 +229,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Smooth scrolling for anchor links (Nav)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            // Allow default behavior for specialized buttons that might just be links
             if (this.classList.contains('product-btn') || this.id === 'back-to-categories') return;
 
             e.preventDefault();
@@ -149,9 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
+                targetElement.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
@@ -163,19 +249,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         updateModalContent();
         modal.style.display = 'block';
-        document.body.style.overflow = 'hidden'; // Prevent scrolling background
+        document.body.style.overflow = 'hidden';
     }
 
     function closeModalHandler() {
         modal.style.display = 'none';
-        document.body.style.overflow = ''; // Restore scrolling
+        document.body.style.overflow = '';
         currentProduct = null;
     }
 
     function updateModalContent() {
         if (!currentProduct) return;
 
-        modalTitle.textContent = currentProduct.title;
+        modalTitle.textContent = getLocalTitle(currentProduct);
         modalPrice.textContent = currentProduct.price;
         modalDescription.textContent = currentProduct.description;
 
@@ -185,7 +271,6 @@ document.addEventListener('DOMContentLoaded', () => {
             modalImage.src = 'images/placeholder.jpg';
         }
 
-        // Hide buttons if there is only one image
         if (currentProduct.images && currentProduct.images.length > 1) {
             prevBtn.style.display = 'block';
             nextBtn.style.display = 'block';
@@ -211,12 +296,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function openContactModal(e) {
         if (e) e.preventDefault();
         const body = document.getElementById('contact-modal-body');
-        if (body && body.children.length === 0) {
-            const contactInfo = document.querySelector('#contact .contact-info');
-            const socialMedia = document.querySelector('#contact .social-media');
-            if (contactInfo) body.appendChild(contactInfo.cloneNode(true));
-            if (socialMedia) body.appendChild(socialMedia.cloneNode(true));
-        }
+        // Always re-clone so the modal reflects the current language
+        body.innerHTML = '';
+        const contactInfo = document.querySelector('#contact .contact-info');
+        const socialMedia = document.querySelector('#contact .social-media');
+        if (contactInfo) body.appendChild(contactInfo.cloneNode(true));
+        if (socialMedia) body.appendChild(socialMedia.cloneNode(true));
         contactModal.style.display = 'block';
         document.body.style.overflow = 'hidden';
     }
@@ -241,7 +326,6 @@ document.addEventListener('DOMContentLoaded', () => {
     nextBtn.addEventListener('click', showNextImage);
     prevBtn.addEventListener('click', showPrevImage);
 
-    // Event Listeners for Contact Modal
     if (contactClose) {
         contactClose.addEventListener('click', closeContactModalHandler);
     }
