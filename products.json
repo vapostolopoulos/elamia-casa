@@ -8,10 +8,10 @@
       "items": [
         {
           "id": "1",
-          "title": "Hanging bed",
-          "title_el": "Κρεμαστό Κρεβάτι",
+          "title": "Small Pet Hanging Bed",
+          "title_el": "Mικρό Κρεμαστό Κρεβάτι",
           "price": "",
-          "description": "",
+          "description": "81.0x43.0cm",
           "images": [
             "images/pet-hanging-bed.jpg"
           ]
@@ -19,9 +19,9 @@
         {
           "id": "2",
           "title": "Small Pet Bed Short",
-          "title_el": "Μικρό Κρεβάτι Κατοικιδίου",
+          "title_el": "Μικρό Κρεβάτι",
           "price": "",
-          "description": "",
+          "description": "49.0x45.0x40.0cm",
           "images": [
             "images/pet-bed-short.jpg"
           ]
@@ -31,7 +31,7 @@
           "title": "Small Pet Bed Water Hyacinth I",
           "title_el": "Μικρό Κρεβάτι Υδρόβιου Υάκινθου I",
           "price": "",
-          "description": "",
+          "description": "40.0x52.0x52.0cm",
           "images": [
             "images/pet-bed-hyacinth-1.jpg"
           ]
@@ -41,7 +41,7 @@
           "title": "Small Pet Bed Water Hyacinth II",
           "title_el": "Μικρό Κρεβάτι Υδρόβιου Υάκινθου II",
           "price": "",
-          "description": "",
+          "description": "54.0x48.0cm",
           "images": [
             "images/pet-bed-hyacinth-2.jpg"
           ]
@@ -52,71 +52,350 @@
       "id": "garden",
       "name": "Garden",
       "name_el": "Κήπος",
-      "image": "images/pot-dark-grey.jpg",
+      "image": "images/ceramic-pot-dark-grey.jpg",
       "items": [
         {
-          "id": "6",
-          "title": "Ceramic Flower Pot ",
-          "title_el": "Κεραμικό Γλαστράκι",
+          "id": "5",
+          "title": "Bamboo Flower Pot (Round)",
+          "title_el": "Γλαστράκι από Μπαμπού (Στρογγυλό)",
           "price": "",
-          "description": "",
+          "description": "S 29.0x29.0x12.5cm\nM 37.0x37.0x15.5cm\nL 48.0x48.0x20.0cm\nXL 63.0x63.0x27.0cm",
           "images": [
-            "images/pot-dark-grey.jpg",
-            "images/pot-grey.jpg",
-            "images/pot-light-grey.jpg"
+            "images/bamboo-pot-round.jpg"
+          ]
+        },
+        {
+          "id": "6",
+          "title": "Bamboo Flower Pot",
+          "title_el": "Γλαστράκι από Μπαμπού",
+          "price": "",
+          "description": "S 40.0x20.0x21.0cm\nM 60.0x30.0x31.0cm\nL 80.0x40.0x41.0cm",
+          "images": [
+            "images/bamboo-pot.jpg"
           ]
         },
         {
           "id": "7",
-          "title": "Ceramic Flower Pot Plain",
-          "title_el": "Κεραμικό Γλαστράκι Απλό",
+          "title": "Bamboo Pot with Cement Coating - Antique Black",
+          "title_el": "Γλάστρα Μπαμπού με Επίστρωση Τσιμέντου - Antique Black",
           "price": "",
-          "description": "",
+          "description": "S 36.0x36.0x40.0cm\nM 46.0x46.0x51.0cm\nL 56.0x56.0x62.0cm",
           "images": [
-            "images/pot-plain-light-grey.jpg"
+            "images/bamboo-pot-cement-antique-black.jpg"
           ]
         },
         {
           "id": "8",
-          "title": "Ceramic Flower Pot Saucer",
-          "title_el": "Κεραμικό Γλαστράκι με Πιατάκι",
+          "title": "Bamboo Pot with Cement Coating - Antique Brown",
+          "title_el": "Γλάστρα Μπαμπού με Επίστρωση Τσιμέντου - Antique Brown",
           "price": "",
-          "description": "",
+          "description": "S 36.0x36.0x40.0cm\nM 46.0x46.0x51.0cm\nL 56.0x56.0x62.0cm",
           "images": [
-            "images/pot-saucer-grey.jpg",
-            "images/pot-saucer-light-grey.jpg",
-            "images/pot-saucer-terracotta.jpg"
+            "images/bamboo-pot-cement-antique-brown.jpg"
+          ]
+        },
+        {
+          "id": "9",
+          "title": "Bamboo Pot with Cement Coating - Antique White",
+          "title_el": "Γλάστρα Μπαμπού με Επίστρωση Τσιμέντου - Antique White",
+          "price": "",
+          "description": "S 36.0x36.0x40.0cm\nM 46.0x46.0x51.0cm\nL 56.0x56.0x62.0cm",
+          "images": [
+            "images/bamboo-pot-cement-antique-white.jpg"
+          ]
+        },
+        {
+          "id": "10",
+          "title": "Bamboo Pot with Cement Coating - Natural Cement",
+          "title_el": "Γλάστρα Μπαμπού με Επίστρωση Τσιμέντου - Natural Cement",
+          "price": "",
+          "description": "S 36.0x36.0x40.0cm\nM 46.0x46.0x51.0cm\nL 56.0x56.0x62.0cm",
+          "images": [
+            "images/bamboo-pot-cement-natural.jpg"
+          ]
+        },
+        {
+          "id": "11",
+          "title": "Ceramic Flower Pot - Dark Grey",
+          "title_el": "Κεραμικό Γλαστράκι - Dark Grey",
+          "price": "",
+          "description": "19.0x19.0x17.0cm",
+          "images": [
+            "images/ceramic-pot-dark-grey.jpg"
+          ]
+        },
+        {
+          "id": "12",
+          "title": "Ceramic Flower Pot - Grey",
+          "title_el": "Κεραμικό Γλαστράκι - Grey",
+          "price": "",
+          "description": "19.0x19.0x17.0cm",
+          "images": [
+            "images/ceramic-pot-grey.jpg"
+          ]
+        },
+        {
+          "id": "13",
+          "title": "Ceramic Flower Pot - Light Grey",
+          "title_el": "Κεραμικό Γλαστράκι - Light Grey",
+          "price": "",
+          "description": "19.0x19.0x17.0cm",
+          "images": [
+            "images/ceramic-pot-light-grey.jpg"
+          ]
+        },
+        {
+          "id": "14",
+          "title": "Ceramic Flower Pot Plain - Dark Grey Set",
+          "title_el": "Απλό Κεραμικό Γλαστράκι - Dark Grey Set",
+          "price": "",
+          "description": "S 13.0x13.0x12.0cm\nM 15.0x15.0x14.0cm\nL 18.5x18.5x17.0cm",
+          "images": [
+            "images/ceramic-pot-plain-dark-grey.jpg"
+          ]
+        },
+        {
+          "id": "15",
+          "title": "Ceramic Flower Pot Plain - Light Grey Set",
+          "title_el": "Απλό Κεραμικό Γλαστράκι - Light Grey Set",
+          "price": "",
+          "description": "S 13.0x13.0x12.0cm\nM 15.0x15.0x14.0cm\nL 18.5x18.5x17.0cm",
+          "images": [
+            "images/ceramic-pot-plain-light-grey.jpg"
+          ]
+        },
+        {
+          "id": "16",
+          "title": "Ceramic Flower Pot Plain - Terracotta Set",
+          "title_el": "Απλό Κεραμικό Γλαστράκι - Terracotta Set",
+          "price": "",
+          "description": "S 13.0x13.0x12.0cm\nM 15.0x15.0x14.0cm\nL 18.5x18.5x17.0cm",
+          "images": [
+            "images/ceramic-pot-plain-terracotta.jpg"
+          ]
+        },
+        {
+          "id": "17",
+          "title": "Ceramic Flower Pot with a Saucer - Grey Set",
+          "title_el": "Κεραμικό Γλαστράκι με Πιατάκι - Grey Set",
+          "price": "",
+          "description": "S 13.0x13.0x13.0cm\nM 15.0x15.0x15.0cm\nL 18.5x18.5x17.5cm",
+          "images": [
+            "images/ceramic-pot-saucer-grey.jpg"
+          ]
+        },
+        {
+          "id": "18",
+          "title": "Ceramic Flower Pot with a Saucer - Light Grey Set",
+          "title_el": "Κεραμικό Γλαστράκι με Πιατάκι - Light Grey Set",
+          "price": "",
+          "description": "S 13.0x13.0x13.0cm\nM 15.0x15.0x15.0cm\nL 18.5x18.5x17.5cm",
+          "images": [
+            "images/ceramic-pot-saucer-light-grey.jpg"
+          ]
+        },
+        {
+          "id": "19",
+          "title": "Ceramic Flower Pot with a Saucer - Terracotta Set",
+          "title_el": "Κεραμικό Γλαστράκι με Πιατάκι - Terracotta Set",
+          "price": "",
+          "description": "S 13.0x13.0x13.0cm\nM 15.0x15.0x15.0cm\nL 18.5x18.5x17.5cm",
+          "images": [
+            "images/ceramic-pot-saucer-terracotta.jpg"
+          ]
+        },
+        {
+          "id": "20",
+          "title": "Sea Grass Flower Pot",
+          "title_el": "Γλαστράκι από Θαλάσσιο Γρασίδι",
+          "price": "",
+          "description": "S 47.0x23.0x25.0cm\nL 54.0x26.0x36.0cm",
+          "images": [
+            "images/sea-grass-pot.jpg"
           ]
         }
       ]
     },
     {
-      "id": "house",
-      "name": "House",
+      "id": "home",
+      "name": "Home",
       "name_el": "Σπίτι",
-      "image": "images/basket-bw.jpg",
+      "image": "images/basket-black-white-recycled-plastic.jpg",
       "items": [
         {
-          "id": "9",
-          "title": "Baskets",
-          "title_el": "Καλάθια",
+          "id": "21",
+          "title": "Black and White Recycled Plastic Basket",
+          "title_el": "Καλάθι από Ανακυκλωμένο Πλαστικό Μαύρο-Άσπρο",
           "price": "",
-          "description": "",
+          "description": "S 31.0x30.0cm\nM 37.0x40.0cm\nL 41.0x46.0cm",
           "images": [
-            "images/basket-bw.jpg",
-            "images/basket-small.jpg"
+            "images/basket-black-white-recycled-plastic.jpg"
           ]
         },
         {
-          "id": "10",
-          "title": "Rattan Floor Baskets",
-          "title_el": "Καλάθια Δαπέδου από Ρατάν",
+          "id": "22",
+          "title": "Rattan Made Basket",
+          "title_el": "Καλάθι από Ρατάν",
           "price": "",
-          "description": "",
+          "description": "S 35.0x28.0x30.0cm\nL 41.0x39.0x30.0cm",
           "images": [
-            "images/basket-floor-l.jpg",
-            "images/basket-floor-m.jpg",
-            "images/basket-floor-s.jpg"
+            "images/basket-rattan-made.jpg"
+          ]
+        },
+        {
+          "id": "23",
+          "title": "X-Large Rattan Floor Decoration",
+          "title_el": "Καλάθι Δαπέδου Ρατάν X-Large",
+          "price": "",
+          "description": "XL 136.0x37.0cm",
+          "images": [
+            "images/rattan-floor-xl.jpg"
+          ]
+        },
+        {
+          "id": "24",
+          "title": "Large Rattan Floor Decoration",
+          "title_el": "Καλάθι Δαπέδου Ρατάν Large",
+          "price": "",
+          "description": "L 104.0x36.0cm",
+          "images": [
+            "images/rattan-floor-large.jpg"
+          ]
+        },
+        {
+          "id": "25",
+          "title": "Medium Rattan Floor Decoration",
+          "title_el": "Καλάθι Δαπέδου Ρατάν Medium",
+          "price": "",
+          "description": "M 84.0x30.0cm",
+          "images": [
+            "images/rattan-floor-medium.jpg"
+          ]
+        },
+        {
+          "id": "26",
+          "title": "Small Rattan Floor Decoration",
+          "title_el": "Καλάθι Δαπέδου Ρατάν Small",
+          "price": "",
+          "description": "S 46.0x25.0cm",
+          "images": [
+            "images/rattan-floor-small.jpg"
+          ]
+        },
+        {
+          "id": "27",
+          "title": "Rattan Shade Big",
+          "title_el": "Καπέλο Φωτιστικού Ρατάν Big",
+          "price": "",
+          "description": "55.0x46.0x46.0cm",
+          "images": [
+            "images/rattan-shade-big.jpg"
+          ]
+        },
+        {
+          "id": "28",
+          "title": "Rattan Shade Flat",
+          "title_el": "Καπέλο Φωτιστικού Ρατάν Flat",
+          "price": "",
+          "description": "20.0x78.0x76.0cm",
+          "images": [
+            "images/rattan-shade-flat.jpg"
+          ]
+        },
+        {
+          "id": "29",
+          "title": "Rattan Shade Hawaii",
+          "title_el": "Καπέλο Φωτιστικού Ρατάν Hawaii",
+          "price": "",
+          "description": "56.0x50.0x50.0cm",
+          "images": [
+            "images/rattan-shade-hawaii.jpg"
+          ]
+        },
+        {
+          "id": "30",
+          "title": "Rattan Shade Small",
+          "title_el": "Καπέλο Φωτιστικού Ρατάν Small",
+          "price": "",
+          "description": "13.0x43.0x43.0cm",
+          "images": [
+            "images/rattan-shade-small.jpg"
+          ]
+        },
+        {
+          "id": "31",
+          "title": "Rattan Shade Thin",
+          "title_el": "Καπέλο Φωτιστικού Ρατάν Thin",
+          "price": "",
+          "description": "37.0x53.0x53.0cm",
+          "images": [
+            "images/rattan-shade-thin.jpg"
+          ]
+        },
+        {
+          "id": "32",
+          "title": "Ash Shaker Box Glasses Case",
+          "title_el": "Θήκη Γυαλιών Ash Shaker Box",
+          "price": "",
+          "description": "4.5x17.0x6.5cm\n6.0x18.0x8.5cm",
+          "images": [
+            "images/shaker-glasses-case-ash.jpg"
+          ]
+        },
+        {
+          "id": "33",
+          "title": "Oak Shaker Box Glasses Case",
+          "title_el": "Θήκη Γυαλιών Oak Shaker Box",
+          "price": "",
+          "description": "4.5x17.0x6.5cm\n6.0x18.0x8.5cm",
+          "images": [
+            "images/shaker-glasses-case-oak.jpg"
+          ]
+        },
+        {
+          "id": "34",
+          "title": "Walnut Shaker Box Glasses Case",
+          "title_el": "Θήκη Γυαλιών Walnut Shaker Box",
+          "price": "",
+          "description": "4.5x17.0x6.5cm\n6.0x18.0x8.5cm",
+          "images": [
+            "images/shaker-glasses-case-walnut.jpg"
+          ]
+        },
+        {
+          "id": "35",
+          "title": "Ash Shaker Box Set",
+          "title_el": "Σετ Ash Shaker Box",
+          "price": "",
+          "description": "5.0x12.0x8.5cm\n7.0x14.5x10.0cm\n9.5x20.0x14.5cm\n12.0x25.0x18.0cm\n16.0x32.0x23.5cm",
+          "images": [
+            "images/shaker-box-set-ash.jpg",
+            "images/shaker-box-set-extra-1.jpg",
+            "images/shaker-box-set-extra-2.jpg"
+          ]
+        },
+        {
+          "id": "36",
+          "title": "Cherry Shaker Box Set",
+          "title_el": "Σετ Cherry Shaker Box",
+          "price": "",
+          "description": "5.0x12.0x8.5cm\n7.0x14.5x10.0cm\n9.5x20.0x14.5cm\n12.0x25.0x18.0cm\n16.0x32.0x23.5cm",
+          "images": [
+            "images/shaker-box-set-cherry.jpg",
+            "images/shaker-box-set-extra-1.jpg",
+            "images/shaker-box-set-extra-2.jpg"
+          ]
+        },
+        {
+          "id": "37",
+          "title": "Oak Shaker Box Set",
+          "title_el": "Σετ Oak Shaker Box",
+          "price": "",
+          "description": "5.0x12.0x8.5cm\n7.0x14.5x10.0cm\n9.5x20.0x14.5cm\n12.0x25.0x18.0cm\n16.0x32.0x23.5cm",
+          "images": [
+            "images/shaker-box-set-oak.jpg",
+            "images/shaker-box-set-extra-1.jpg",
+            "images/shaker-box-set-extra-2.jpg"
           ]
         }
       ]
@@ -128,95 +407,173 @@
       "image": "images/chair-walnut.jpg",
       "items": [
         {
-          "id": "11",
-          "title": "Chair I",
-          "title_el": "Καρέκλα I",
+          "id": "38",
+          "title": "Armchair AM1-B",
+          "title_el": "Πολυθρόνα AM1-B",
           "price": "",
-          "description": "",
+          "description": "63.0x146.0x63.0cm",
           "images": [
-            "images/chair-walnut.jpg"
+            "images/armchair-am1-b.jpg"
           ]
         },
         {
-          "id": "12",
-          "title": "Chair II",
-          "title_el": "Καρέκλα II",
+          "id": "39",
+          "title": "Armchair AM1-S",
+          "title_el": "Πολυθρόνα AM1-S",
           "price": "",
-          "description": "",
+          "description": "64.0x63.0x63.0cm\n75.0x70.0x65.0cm",
+          "images": [
+            "images/armchair-am1-s.jpg"
+          ]
+        },
+        {
+          "id": "40",
+          "title": "Bench BE1 Oak",
+          "title_el": "Πάγκος BE1 Oak",
+          "price": "",
+          "description": "50.0x122.0x34.0cm",
+          "images": [
+            "images/bench-be1-oak.jpg"
+          ]
+        },
+        {
+          "id": "41",
+          "title": "Bench Minimal BE Oak Small",
+          "title_el": "Πάγκος Minimal BE Oak Small",
+          "price": "",
+          "description": "46.0x80.0cm",
+          "images": [
+            "images/bench-be-oak-small.jpg"
+          ]
+        },
+        {
+          "id": "42",
+          "title": "Bookcase BC-1 Ash",
+          "title_el": "Βιβλιοθήκη BC-1 Ash",
+          "price": "",
+          "description": "197.0x220.0x75.0cm",
+          "images": [
+            "images/bookcase-bc1-ash.jpg"
+          ]
+        },
+        {
+          "id": "43",
+          "title": "Bookcase BC2-B",
+          "title_el": "Βιβλιοθήκη BC2-B",
+          "price": "",
+          "description": "135.0x250.0cm",
+          "images": [
+            "images/bookcase-bc2-b.jpg"
+          ]
+        },
+        {
+          "id": "44",
+          "title": "Bookcase BC-3A Ash",
+          "title_el": "Βιβλιοθήκη BC-3A Ash",
+          "price": "",
+          "description": "60.0x178.0x28.0cm",
+          "images": [
+            "images/bookcase-bc3a-ash.jpg"
+          ]
+        },
+        {
+          "id": "45",
+          "title": "Bookcase BC-3B Ash",
+          "title_el": "Βιβλιοθήκη BC-3B Ash",
+          "price": "",
+          "description": "125.0x60.0x28.0cm",
+          "images": [
+            "images/bookcase-bc3b-ash.jpg"
+          ]
+        },
+        {
+          "id": "46",
+          "title": "Ash Chair",
+          "title_el": "Καρέκλα Ash",
+          "price": "",
+          "description": "76.0x53.0x60.0cm\nSeat Height 42.0cm",
+          "images": [
+            "images/chair-ash.jpg"
+          ]
+        },
+        {
+          "id": "47",
+          "title": "Oak Chair",
+          "title_el": "Καρέκλα Oak",
+          "price": "",
+          "description": "76.0x53.0x60.0cm\nSeat Height 44.0cm",
           "images": [
             "images/chair-oak.jpg"
           ]
         },
         {
-          "id": "13",
-          "title": "Minimal I",
-          "title_el": "Minimal I",
+          "id": "48",
+          "title": "Walnut Chair",
+          "title_el": "Καρέκλα Walnut",
           "price": "",
-          "description": "",
+          "description": "75.0x53.0x60.0cm\nSeat Height 43.0cm",
           "images": [
-            "images/minimal-1-oak-with-varnish.jpg",
-            "images/minimal-1-alt.jpg"
+            "images/chair-walnut.jpg"
           ]
         },
         {
-          "id": "14",
-          "title": "Minimal II",
-          "title_el": "Minimal II",
+          "id": "49",
+          "title": "Minimal Stool 1-B Ash With Varnish",
+          "title_el": "Σκαμπό Minimal 1-B Ash με Βερνίκι",
           "price": "",
-          "description": "",
+          "description": "78.0x46.0cm",
           "images": [
-            "images/minimal-2-ash-with-varnish.jpg",
-            "images/minimal-2-ash.jpg"
+            "images/stool-1b-ash-varnish.jpg"
           ]
         },
         {
-          "id": "15",
-          "title": "Minimal III",
-          "title_el": "Minimal III",
+          "id": "50",
+          "title": "Minimal Stool 1-S Oak With Varnish",
+          "title_el": "Σκαμπό Minimal 1-S Oak με Βερνίκι",
           "price": "",
-          "description": "",
+          "description": "50.0x46.0cm",
           "images": [
-            "images/minimal-3-oak.jpg"
+            "images/stool-1s-oak-varnish.jpg"
           ]
         },
         {
-          "id": "16",
-          "title": "Minimal IV",
-          "title_el": "Minimal IV",
+          "id": "51",
+          "title": "Minimal Stool 2-S Oak",
+          "title_el": "Σκαμπό Minimal 2-S Oak",
           "price": "",
-          "description": "",
+          "description": "50.0x46.0cm",
           "images": [
-            "images/minimal-4-ash-small-table.png"
+            "images/stool-2s-oak.jpg"
           ]
         },
         {
-          "id": "17",
-          "title": "Minimal V",
-          "title_el": "Minimal V",
+          "id": "52",
+          "title": "Minimal Stool 3-S Ash",
+          "title_el": "Σκαμπό Minimal 3-S Ash",
           "price": "",
-          "description": "",
+          "description": "S 50.0x46.0cm",
           "images": [
-            "images/minimal-5-walnut.jpg"
+            "images/stool-3s-ash.jpg"
           ]
         },
         {
-          "id": "18",
-          "title": "Shelves Big",
-          "title_el": "Μεγάλη Ραφιέρα",
+          "id": "53",
+          "title": "Minimal Stool 3-S Walnut With Varnish",
+          "title_el": "Σκαμπό Minimal 3-S Walnut με Βερνίκι",
           "price": "",
-          "description": "",
+          "description": "S 50.0x46.0cm",
           "images": [
-            "images/shelves-big.png"
+            "images/stool-3s-walnut-varnish.jpg"
           ]
         },
         {
-          "id": "19",
-          "title": "Shelves tall",
-          "title_el": "Ψηλή Ραφιέρα",
+          "id": "54",
+          "title": "Minimal Stool 5-T Oak",
+          "title_el": "Σκαμπό Minimal 5-T Oak",
           "price": "",
-          "description": "",
+          "description": "T 50.0x65.0cm",
           "images": [
-            "images/shelves-tall.jpg"
+            "images/stool-5t-oak.jpg"
           ]
         }
       ]

@@ -250,6 +250,7 @@ nav a:hover {
     font-size: 0.95rem;
     color: var(--light-text);
     margin-bottom: 20px;
+    white-space: pre-line;
 }
 
 .product-btn {
@@ -433,6 +434,10 @@ footer {
 
 .modal-info h3 {
     margin-top: 0;
+}
+
+#modal-description {
+    white-space: pre-line;
 }
 
 /* Contact Modal */
