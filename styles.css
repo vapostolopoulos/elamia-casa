@@ -70,6 +70,14 @@ header {
     font-weight: bold;
     color: var(--primary-color);
     letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 80px;
+    width: auto;
+    display: block;
 }
 
 nav ul {
