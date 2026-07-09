@@ -86,6 +86,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return (currentLang === 'el' && category.name_el) ? category.name_el : category.name;
     }
 
+    function getLocalDescription(product) {
+        return (currentLang === 'el' && product.description_el) ? product.description_el : product.description;
+    }
+
     function setLanguage(lang) {
         currentLang = lang;
         localStorage.setItem('lang', lang);
@@ -102,6 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (modal.style.display === 'block' && currentProduct) {
             modalTitle.textContent = getLocalTitle(currentProduct);
+            modalDescription.textContent = getLocalDescription(currentProduct);
         }
     }
 
@@ -207,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="product-info">
                     <h3 class="product-title">${title}</h3>
                     <span class="product-price">${product.price}</span>
-                    <p class="product-description">${product.description}</p>
+                    <p class="product-description">${getLocalDescription(product)}</p>
                     <a href="#contact" class="product-btn">${t('inquire_btn')}</a>
                 </div>
             `;
@@ -263,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         modalTitle.textContent = getLocalTitle(currentProduct);
         modalPrice.textContent = currentProduct.price;
-        modalDescription.textContent = currentProduct.description;
+        modalDescription.textContent = getLocalDescription(currentProduct);
 
         if (currentProduct.images && currentProduct.images.length > 0) {
             modalImage.src = currentProduct.images[currentImageIndex];
